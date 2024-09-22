@@ -39,36 +39,36 @@ export default function Home() {
       </div>
     );
   }
-
+ 
   return ( 
     <div>
-      <div className="flex justify-center">Chat messages</div>
+      <div className=" flex justify-center mt-10 ">Chat messages</div>
       
-      <div className="flex flex-col justify-center items-center h-screen">
-        <div className="mb-4 w-full text-black max-w-md bg-gray-100 p-4 rounded-lg overflow-y-auto h-64">
-          {messages.map((msg, index) => (
-            <div key={index}>
-              {msg}
-              </div> 
-          ))}
-        </div>
+        <div className="flex flex-col justify-center items-center h-screen">
+          <div className="mb-4 w-full text-black max-w-md bg-gray-100 p-4 rounded-lg overflow-y-auto h-64">
+            {messages.map((msg, index) => (
+              <div key={index}>
+                {msg}
+                </div> 
+            ))}
+          </div>
 
-        <div className="flex items-center">
-          <input 
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            type="text" 
-            placeholder="Type your message" 
-            className="rounded-lg text-black p-2"
-          />
-          <button 
-            onClick={handleSendMessage}
-            className="bg-violet-400 rounded-lg px-5 ml-2"
-          > 
-            Send
-          </button>
+          <div className="flex items-center">
+            <input 
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              type="text" 
+              placeholder="Type your message" 
+              className="rounded-lg text-black p-2"
+            />
+            <button 
+              onClick={handleSendMessage}
+              className="bg-violet-400 rounded-lg px-5 ml-2"
+            > 
+              Send
+            </button>
+          </div>
         </div>
-      </div>
     </div> 
   );
 }

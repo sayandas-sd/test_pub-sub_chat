@@ -29,7 +29,7 @@ wss.on('connection', function connection(ws) {
   console.log("server connected", ++count);
   
 // as soon as the user connect say hello to the user --> final task
-  ws.send('Hello! Message From Server!!');
+  
 });
 
 server.listen(8080, function() {
