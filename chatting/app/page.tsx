@@ -11,7 +11,7 @@ export default function Home() {
     
     newSocket.onopen = () => {
       console.log("Connection Established");
-      newSocket.send('hello server'); 
+      
     };
 
     newSocket.onmessage = (messageEvent) => {
